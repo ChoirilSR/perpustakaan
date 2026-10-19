@@ -1,0 +1,106 @@
+/* --- RESET & BASIC STYLING --- */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #357abd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Membuat posisi navbar pas di tengah layar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Memberikan jarak renggang yang rapi antar menu */
+}
+
+/* --- MERAPIKAN TEXT UTAMA (Home & Logout) --- */
+.menu > a {
+    color: #ffffff; /* Mengubah teks hitam menjadi putih bersih */
+    text-decoration: none;
+    padding: 20px 15px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.menu > a:hover {
+    background-color: #2b6cb0; /* Efek hover biru gelap */
+}
+
+/* --- MERAPIKAN TOMBOL DROPDOWN (Data Buku & Anggota) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    background-color: transparent; /* Menghilangkan KOTAK PUTIH bawaan button */
+    color: #ffffff;                /* Mengubah teks menjadi putih bersih */
+    border: none;                  /* Menghilangkan border kotak bawaan button */
+    font-family: inherit;          /* Mengikuti font navbar */
+    font-size: 1rem;
+    padding: 20px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2b6cb0; /* Efek hover tombol saat disentuh mouse */
+}
+
+/* --- STYLING ISI DROPDOWN (Lihat & Tambah) --- */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 4px 4px; /* Sudut bawah melengkung halus */
+}
+
+/* Mengatur teks link di dalam list dropdown */
+.dropdown-content a {
+    color: #333333 !important; /* Memaksa warna teks menjadi abu-abu gelap agar kontras */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;            /* Membuat link memanjang penuh */
+    text-align: left;
+    transition: background 0.2s;
+}
+
+/* Menjinakkan tag <br> agar tidak merusak jarak vertikal menu */
+.dropdown-content br {
+    display: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1 !important; /* Efek abu-abu tipis saat disorot */
+    color: #357abd !important;            /* Teks berubah jadi biru tema saat disorot */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
